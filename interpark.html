@@ -1,0 +1,29 @@
+<<!DOCTYPE html>
+<html>
+    <head>
+        <title> 인터파크 자동호출</title>
+    </head>
+    <body>
+        <h1> ~임영웅 O</h1>
+        <p> var isRunning = true;
+
+            var clickInterval = setInterval(function() {
+                var reservationButton = document.querySelector('a.sideBtn.is-primary[data-check="false"]');
+                if (reservationButton) {
+                    reservationButton.click();
+                    reservationButton.click();
+                    clearInterval(clickInterval);
+                    isRunning = false;
+                }
+            }, 5); 
+            
+            setInterval(function() {
+                if (isRunning) {
+                    console.log('타이머 실행 중...'); 
+                } else {
+                    console.log('타이머 종료'); 
+                }
+            }, 100);</p>
+            <li> 새로고침 X</br> <li>10초 전쯤 누르기</br> <li>00초에 가깝게 광클 필수</br> <li> 야매/시간 당겨서 예매버튼 활성화->광클</br>
+    </body>
+</html>
